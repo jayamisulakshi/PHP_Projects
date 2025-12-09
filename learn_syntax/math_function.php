@@ -42,5 +42,21 @@
     $total = rand(1, 10); // give random number (min number, max number)
 
 
-    echo $total;
+    echo $total . "<br>";
+
+
+
+
+    // ---------------------------------------------------------------------------- //
+    // hashing === transforming sensitive data(password) into 
+    //             letters, numbers, and/or symbols via a mathematical process.
+    //             similar to encryption, hide the original data from 3rd parties.
+
+    $password = "password";
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+    if(password_verify("entered password", $hash)){
+        echo "Login successful";
+    } else {
+        echo "Login failed";
+    }
 ?>
