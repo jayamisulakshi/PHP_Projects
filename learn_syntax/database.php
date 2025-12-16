@@ -15,14 +15,14 @@
                                 $db_name);
     }
     catch(mysqli_sql_exception) {
-        echo "Failed to connect.";
+        echo "Failed to connect. <br>";
     }
 
     if($conn){
-        echo "Connected successfully";
+        echo "Connected successfully!<br>";
     } 
     else{
-        echo "Connection failed: ";
+        echo "Connection failed. <br>";
     }
 
     // $conn = mysqli_connect($db_server,
